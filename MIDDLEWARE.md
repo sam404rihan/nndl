@@ -138,7 +138,7 @@ The NNDL system implements **defense in depth** with multiple security layers:
 ❌ **Problem**: Logged-in users could access login page repeatedly  
 ✅ **Solution**: Middleware redirects authenticated users to dashboard
 
-❌ **Problem**: Technicians could attempt to access admin APIs  
+❌ **Problem**: Technicians could attempt to access admin pages  
 ✅ **Solution**: Middleware blocks access before the page even loads
 
 ---
@@ -359,4 +359,7 @@ The middleware in the NNDL Lab Management System is a **critical security compon
 - [SETUP_GUIDE.md](./SETUP_GUIDE.md) - Setup instructions
 - [SCHEMA_CHANGES.md](./SCHEMA_CHANGES.md) - Database schema
 
-For questions or issues, refer to the [Supabase Middleware Documentation](https://supabase.com/docs/guides/auth/server-side/nextjs).
+For questions or issues:
+- **Supabase Middleware**: [Supabase Next.js Auth Documentation](https://supabase.com/docs/guides/auth/server-side/nextjs)
+- **Project Issues**: Create an issue in the project repository
+- **Security Concerns**: Contact the project maintainer for security-related questions

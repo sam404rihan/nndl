@@ -40,6 +40,11 @@ export async function middleware(request: NextRequest) {
         get(name: string) {
           return request.cookies.get(name)?.value;
         },
+        /**
+         * Cookie setter with HIPAA-compliant session-only configuration.
+         * Removes maxAge and expires to ensure cookies expire on browser close,
+         * preventing unauthorized access on shared workstations.
+         */
         set(name: string, value: string, options: CookieOptions) {
           // SECURITY: Remove maxAge and expires to create session-only cookies
           // Cookies will expire when browser closes (HIPAA requirement)
