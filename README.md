@@ -31,9 +31,13 @@ Every critical action (`INSERT`, `UPDATE`, `DELETE`) on `patients`, `orders`, an
 *Implemented via `audit_triggers.sql`.*
 
 ### 3. Role-Based Middleware
- The application protects sensitive routes at the Edge.
+ The application protects sensitive routes at the Edge using Next.js Middleware.
 - **Admin Areas** (`/dashboard/admin`, `/tests`, `/settings`) are blocked for Technicians.
 - **Redirection**: Unauthorized attempts are instantly redirected to the safe Dashboard.
+- **Session Security**: Session-only cookies that expire on browser close for HIPAA compliance.
+- **Real-time Role Verification**: Every request validates user role from the database.
+
+**For complete middleware documentation, see [MIDDLEWARE.md](./MIDDLEWARE.md)**.
 
 ### 4. Patient Privacy (Encryption)
 Sensitive fields (`first_name`, `last_name`, `contact`) are encrypted using AES-256 before entering the database.
@@ -105,6 +109,7 @@ npm run dev
 - **[SETUP_GUIDE.md](./SETUP_GUIDE.md)** - Step-by-step setup instructions
 - **[PROJECT_STRUCTURE.md](./PROJECT_STRUCTURE.md)** - Detailed project structure
 - **[SCHEMA_CHANGES.md](./SCHEMA_CHANGES.md)** - Database schema change history
+- **[MIDDLEWARE.md](./MIDDLEWARE.md)** - Comprehensive middleware documentation and security architecture
 
 ---
 

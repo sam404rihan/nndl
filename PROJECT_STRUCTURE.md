@@ -70,7 +70,7 @@ nndl-lab-system/
 │   │   └── settingsService.ts        # Settings management
 │   ├── types/                        # TypeScript type definitions
 │   │   └── index.ts                  # All type definitions
-│   └── middleware.ts                 # Auth & route protection
+│   └── middleware.ts                 # Auth & route protection (See MIDDLEWARE.md for details)
 ├── supabase/                         # Supabase configuration
 │   └── migrations/                   # SQL migration files
 │       └── audit_triggers.sql        # Audit logging triggers
@@ -85,6 +85,7 @@ nndl-lab-system/
 ├── README.md                         # Project overview
 ├── SETUP_GUIDE.md                    # Setup instructions
 ├── PROJECT_STRUCTURE.md              # This file
+├── MIDDLEWARE.md                     # Middleware role and security documentation
 └── SCHEMA_CHANGES.md                 # Database change log
 
 ```
@@ -162,9 +163,9 @@ nndl-lab-system/
 - ✅ Row Level Security (RLS) policies on all tables
 - ✅ Role-based access control (Admin/Technician)
 - ✅ Automatic audit logging via database triggers
-- ✅ Session timeout via middleware
+- ✅ Session timeout via middleware (session-only cookies)
 - ✅ Secure data transmission (HTTPS)
-- ✅ Middleware route protection
+- ✅ Middleware route protection (See MIDDLEWARE.md)
 - ✅ Unbypassable database-level security
 
 ### RLS Policies:
